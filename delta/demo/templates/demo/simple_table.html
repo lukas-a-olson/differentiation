@@ -1,0 +1,25 @@
+{% load render_table from django_tables2 %}
+<!doctype html>
+<style>
+    h4 {
+        border-width: 2px;
+        border-radius: 25px;
+        border-color: gray;
+        border-style: solid;
+        padding-left: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+</style>
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    </head>
+    <body>
+        <h4>{{ description }}</h4>
+        {% render_table table %}
+    </body>
+</html>
